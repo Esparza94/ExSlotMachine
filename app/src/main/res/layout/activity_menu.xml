@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.esparza.exslotmachine.MenuActivity"
+    android:id="@+id/activity_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wallpaper3"
+    android:paddingTop="20dp">
+
+    <LinearLayout
+        android:id="@+id/llCabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:id="@+id/logo"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_default"
+        android:onClick="btnPlayOnClick"/>
+
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/btnPlay"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_default"
+        android:onClick="btnAboutOnClick"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dev_name"
+        android:textStyle="bold"
+        android:gravity="bottom"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:editable="false"
+        android:inputType="none" />
+</RelativeLayout>

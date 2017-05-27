@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.esparza.exslotmachine.PersonagemActivity"
+    android:id="@+id/activity_personagem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wallpaper3">
+
+    <LinearLayout
+        android:id="@+id/llCabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:id="@+id/logo"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sexo_m"
+        android:id="@+id/rbtnSexoM"
+        android:layout_marginStart="44dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:onClick="rbtnSexoOnClick"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sexo_f"
+        android:id="@+id/rbtnSexoF"
+        android:layout_marginEnd="57dp"
+        android:layout_alignTop="@+id/rbtnSexoM"
+        android:layout_alignParentEnd="true"
+        android:onClick="rbtnSexoOnClick"/>/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtPlayerName"
+        android:layout_below="@+id/rbtnSexoM"
+        android:layout_alignStart="@+id/rbtnSexoM"
+        android:layout_marginTop="28dp"
+        android:layout_alignEnd="@+id/rbtnSexoF" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txtNumFicha"
+        android:layout_below="@+id/txtPlayerName"
+        android:layout_alignStart="@+id/txtPlayerName"
+        android:layout_marginTop="28dp"
+        android:layout_alignEnd="@+id/txtPlayerName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/btnSavePlayer"
+        android:layout_below="@+id/txtNumFicha"
+        android:layout_alignStart="@+id/txtNumFicha"
+        android:layout_marginTop="27dp"
+        android:layout_alignEnd="@+id/txtNumFicha"
+        android:background="@drawable/btn_default"
+        android:onClick="btnSavePlayerOnClick"/>
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="175dp"
+        android:id="@+id/imgvSexo"
+        android:layout_below="@+id/llCabecalho"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_above="@+id/rbtnSexoF" />
+
+</RelativeLayout>
